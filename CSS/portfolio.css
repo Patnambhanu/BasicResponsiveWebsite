@@ -1,0 +1,122 @@
+:root {
+    --primary-color: #f3eed9;
+    --primary-color1: #824936;
+
+    --neutral-color1: #FFF;
+    --neutral-color2: #222c2a;
+
+    --ff-primary: "Roboto", sans-serif;
+    --ff-accent: "Playfair Display", serif;
+
+
+
+}
+
+body {
+    font-weight: 400;
+    font-family: var(--ff-primary);
+    font-size: 1.3125rem;
+    line-height: 1.6;
+
+}
+
+h1,
+h2,
+h3 {
+    color: var(--primary-color1);
+    font-family: var(--ff-accent);
+    line-height: 1;
+    font-weight: 900;
+    margin-bottom: 1em;
+
+}
+
+.text-center {
+    text-align: center;
+}
+
+header,
+section {
+    padding: 3rem 0;
+
+}
+
+@media screen and (min-width:30em) {
+
+    header,
+    section {
+        padding: 4rem 0;
+
+    }
+
+}
+
+.container {
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+
+}
+
+.container--narrower {
+    max-width: 32rem;
+}
+
+.bg-light {
+    background-color: var(--primary-color);
+}
+
+.first {
+    /*bg-primary*/
+    color: var(--neutral-color1);
+    background-color: var(--neutral-color2);
+
+}
+
+.second {
+    /*bg-dark*/
+    color: var(--neutral-color1);
+    background-color: var(--primary-color1);
+
+}
+
+.first h2,
+.second h2 {
+    color: var(--primary-color);
+}
+
+
+img {
+    max-width: 100%;
+}
+
+img:active{
+    animation-name: rotate;
+    animation-duration: 2s;
+}
+
+@keyframes rotate {
+
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width:40em) {
+    .split {
+
+        flex-direction: row;
+
+    }
+
+    .split>* {
+        flex-basis: 100%;
+    }
+
+    .split>*+* {
+        margin-left: 2em;
+    }
+
+
+}
